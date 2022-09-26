@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:context=".MainActivity"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:ignore="UselessParent">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp" app:srcCompat="@drawable/edf"
+                                        android:contentDescription="@string/EDF"
+                                        android:id="@+id/imageViewEDF" android:layout_weight="1"/>
+                                <TextView
+                                        android:layout_width="700dp"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/EDF"
+                                        android:id="@+id/EDF"
+                                        android:textSize="65sp"
+                                        android:textColor="@color/black"
+                                        android:layout_weight="2">
+                                </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp" app:srcCompat="@drawable/identification"
+                                        android:contentDescription="@string/Identification"
+                                        android:id="@+id/imageViewIdentification" android:layout_weight="1"/>
+
+                                <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp" app:srcCompat="@drawable/client"
+                                        android:contentDescription="@string/Client"
+                                        android:id="@+id/imageViewClient" android:layout_weight="1"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent">
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/Identification"
+                                        android:id="@+id/Identification"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:layout_weight="2"
+                                        android:textAlignment="center">
+                                </TextView>
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/ReleveCompteur"
+                                        android:id="@+id/ReleveCompteur"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:layout_weight="2"
+                                        android:textAlignment="center">
+                                </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp" app:srcCompat="@drawable/transfert"
+                                        android:contentDescription="@string/Transfert"
+                                        android:id="@+id/imageViewTransfert" android:layout_weight="1"/>
+                                <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp" app:srcCompat="@drawable/sauvegarde"
+                                        android:contentDescription="@string/Sauvegarde"
+                                        android:id="@+id/imageViewSauvegarde" android:layout_weight="1"
+                                        tools:ignore="DuplicateIds"/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent">
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/ImportDonnees"
+                                        android:id="@+id/ImportDonnes"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:layout_weight="2"
+                                        android:textAlignment="center">
+                                </TextView>
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/Sauvegarde"
+                                        android:id="@+id/Sauvegarde"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:layout_weight="2"
+                                        android:textAlignment="center">
+                                </TextView>
+                        </LinearLayout>
+
+                </LinearLayout>
+</LinearLayout>

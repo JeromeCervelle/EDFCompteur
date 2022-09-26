@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EDFCompteur</string>
+    <string name="Identification">Identification</string>
+    <string name="ReleveCompteur">ReleveCompteur</string>
+    <string name="EDF">EDF</string>
+    <string name="ImportDonnees">ImportDonnees</string>
+    <string name="Sauvegarde">Sauvegarde</string>
+    <string name="Client">Client</string>
+    <string name="Transfert">Transfert</string>
+</resources>
