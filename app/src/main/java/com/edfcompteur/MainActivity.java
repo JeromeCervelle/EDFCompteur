@@ -31,23 +31,37 @@ public class MainActivity extends AppCompatActivity {
         mImportDonnees = findViewById(R.id.ImportDonnes);
         mSauvegarde = findViewById(R.id.Sauvegarde);
 
-        View.OnClickListener imageIdentification = new View.OnClickListener() {
+//        View.OnClickListener imageIdentification = new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                switch(v.getId()) {
+//                    case R.id.imageViewIdentification:
+//                        Intent i = new Intent(MainActivity.this, Identification.class);
+//                        startActivity(i, IDENTIFICATION_ACTIVITY_REQUEST_CODE);
+//                        break;
+//                }
+//
+//            }
+//        };
+
+        mImageViewIdentification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch(v.getId()) {
-                    case R.id.imageViewIdentification:
-                        Intent i = new Intent(MainActivity.this, Identification.class);
-                        startActivity(i, IDENTIFICATION_ACTIVITY_REQUEST_CODE);
-                        break;
-                }
-
+                Intent Identification = new Intent(MainActivity.this, Identification.class);
+                startActivity(Identification);
             }
-        };
+        });
 
-        mImageViewIdentification.setOnClickListener(imageIdentification);
+        mImageViewClient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ReleveCompteur = new Intent(MainActivity.this, com.edfcompteur.ReleveCompteur.class);
+                startActivity(ReleveCompteur);
+            }
+        });
+
 
     }
 
-    private void startActivity(Intent i, int identificationActivityRequestCode) {
-    }
+
 }

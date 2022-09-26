@@ -14,6 +14,15 @@
             android:theme="@style/Theme.EDFCompteur"
             tools:targetApi="31">
         <activity
+                android:name=".Sauvegarde"
+                android:exported="false"/>
+        <activity
+                android:name=".ImportDonnes"
+                android:exported="false"/>
+        <activity
+                android:name=".ReleveCompteur"
+                android:exported="false"/>
+        <activity
                 android:name=".Identification"
                 android:exported="false"/>
         <activity

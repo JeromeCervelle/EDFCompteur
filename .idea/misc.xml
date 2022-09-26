@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jcerv/IdeaProjects/EDFCompteur/app/src/main/res/layout/activity_identification.xml" value="0.1" />
+        <entry key="..\:/Users/jcerv/IdeaProjects/EDFCompteur/app/src/main/res/layout/activity_import_donnes.xml" value="0.2708333333333333" />
         <entry key="..\:/Users/jcerv/IdeaProjects/EDFCompteur/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/jcerv/IdeaProjects/EDFCompteur/app/src/main/res/layout/activity_releve_compteur.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/jcerv/IdeaProjects/EDFCompteur/app/src/main/res/layout/activity_sauvegarde.xml" value="0.2708333333333333" />
       </map>
     </option>
   </component>
