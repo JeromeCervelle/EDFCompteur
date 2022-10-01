@@ -1,12 +1,12 @@
-package com.edfcompteur;
+package com.edfcompteur.controleur;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.edfcompteur.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         mImageViewClient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ReleveCompteur = new Intent(MainActivity.this, com.edfcompteur.ReleveCompteur.class);
+                Intent ReleveCompteur = new Intent(MainActivity.this, com.edfcompteur.controleur.ReleveCompteur.class);
                 startActivity(ReleveCompteur);
             }
         });

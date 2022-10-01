@@ -1,13 +1,14 @@
-package com.edfcompteur;
+package com.edfcompteur.controleur;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.edfcompteur.R;
 
-public class Sauvegarde extends AppCompatActivity {
+public class Identification extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sauvegarde);
+        setContentView(R.layout.activity_identification);
     }
 }

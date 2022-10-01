@@ -14,19 +14,19 @@
             android:theme="@style/Theme.EDFCompteur"
             tools:targetApi="31">
         <activity
-                android:name=".Sauvegarde"
+                android:name=".controleur.Sauvegarde"
                 android:exported="false"/>
         <activity
-                android:name=".ImportDonnes"
+                android:name=".controleur.ImportDonnes"
                 android:exported="false"/>
         <activity
-                android:name=".ReleveCompteur"
+                android:name=".controleur.ReleveCompteur"
                 android:exported="false"/>
         <activity
-                android:name=".Identification"
+                android:name=".controleur.Identification"
                 android:exported="false"/>
         <activity
-                android:name=".MainActivity"
+                android:name=".controleur.MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
