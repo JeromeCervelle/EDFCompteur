@@ -1,11 +1,18 @@
 package com.edfcompteur.model;
 
 import android.database.DatabaseErrorHandler;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import java.util.Date;
 
+@Entity(tableName = "client")
 public class Client {
-
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "identifiant")
     private String identifiant, nom, prenom, adresse, codePostal, ville, telephone;
 
     private String idCompteur;
