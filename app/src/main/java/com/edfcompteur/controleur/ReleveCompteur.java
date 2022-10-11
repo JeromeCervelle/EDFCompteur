@@ -1,14 +1,29 @@
 package com.edfcompteur.controleur;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
 import android.os.Bundle;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import com.edfcompteur.R;
+import org.jetbrains.annotations.NotNull;
 
-public class ReleveCompteur extends AppCompatActivity {
+public class ReleveCompteur extends ViewHolder {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_releve_compteur);
+    private final TextView clientItemView;
+    public ReleveCompteur(View itemView) {
+        super(itemView);
+        this.clientItemView = itemView.findViewById(R.id.textView);
+    }
+
+    public void bind(String text) {
+        clientItemView.setText(text);
+    }
+
+    static ReleveCompteur create(ViewGroup parent) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
+        return new ReleveCompteur(view);
     }
 }
