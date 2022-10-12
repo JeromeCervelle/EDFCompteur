@@ -22,7 +22,7 @@ public class ReleveCompteur extends ViewHolder {
         clientItemView.setText(text);
     }
 
-    static ReleveCompteur create(ViewGroup parent) {
+    public static ReleveCompteur create(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
         return new ReleveCompteur(view);
     }

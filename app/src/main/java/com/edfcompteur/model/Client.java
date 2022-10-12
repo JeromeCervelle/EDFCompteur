@@ -13,15 +13,40 @@ public class Client {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "identifiant")
-    private String identifiant, nom, prenom, adresse, codePostal, ville, telephone;
+    private String identifiant;
+    @ColumnInfo(name = "nom")
+    private String nom;
 
+    @ColumnInfo(name = "prenom")
+    private String prenom;
+
+    @ColumnInfo(name = "adresse")
+    private String adresse;
+
+    @ColumnInfo(name ="codePostal")
+    private String codePostal;
+
+    @ColumnInfo(name ="ville")
+    private String ville;
+
+    @ColumnInfo(name = "telephone")
+    private String telephone;
+
+    @ColumnInfo(name = "idCompteur")
     private String idCompteur;
-    private Double ancienReleve;
-    private Date dateAncienReleve;
 
+    @ColumnInfo(name = "ancienReleve")
+    private Double ancienReleve;
+    @ColumnInfo(name = "dateAncienReleve")
+    private String dateAncienReleve;
+
+    @ColumnInfo(name ="dernierReleve")
     private Double dernierReleve = 0.0;
-    private Date dateDernierReleve = new Date();
+    @ColumnInfo(name = "dateDernierReleve")
+    private String dateDernierReleve;
+    @ColumnInfo(name = "signatureBase64")
     private String signatureBase64 = "";
+    @ColumnInfo(name = "situation")
     private int situation = 0;
 
     public String getIdentifiant() {
@@ -96,11 +121,11 @@ public class Client {
         this.ancienReleve = ancienReleve;
     }
 
-    public Date getDateAncienReleve() {
+    public String getDateAncienReleve() {
         return dateAncienReleve;
     }
 
-    public void setDateAncienReleve(Date dateAncienReleve) {
+    public void setDateAncienReleve(String dateAncienReleve) {
         this.dateAncienReleve = dateAncienReleve;
     }
 
@@ -112,11 +137,11 @@ public class Client {
         this.dernierReleve = dernierReleve;
     }
 
-    public Date getDateDernierReleve() {
+    public String getDateDernierReleve() {
         return dateDernierReleve;
     }
 
-    public void setDateDernierReleve(Date dateDernierReleve) {
+    public void setDateDernierReleve(String dateDernierReleve) {
         this.dateDernierReleve = dateDernierReleve;
     }
 
@@ -139,7 +164,7 @@ public class Client {
     public Client() {
     }
 
-    public Client(Double dernierReleve, Date dateDernierReleve, String signatureBase64, int situation) {
+    public Client(Double dernierReleve, String dateDernierReleve, String signatureBase64, int situation) {
         this.dernierReleve = dernierReleve;
         this.dateDernierReleve = dateDernierReleve;
         this.signatureBase64 = signatureBase64;

@@ -15,7 +15,7 @@ public abstract class EDFRoomDatabase extends RoomDatabase {
     public abstract IClientDao clientDao();
 
     private static volatile EDFRoomDatabase INSTANCE;
-    private static final int NUMBER_OF_TREADS = 4;
+    private static final int NUMBER_OF_TREADS = 1;
     public static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_TREADS);
     public static EDFRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
