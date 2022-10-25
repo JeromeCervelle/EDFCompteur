@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="big_padding">10dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="big_padding">16dp</dimen>
+    <dimen name="min_height">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Cards on mobile default to 8dp margins. {@code layout_margin} needs to be set directly on a
+      {@link View} in its layout and won't work when included as part of a style. -->
+    <dimen name="mtrl_card_spacing">8dp</dimen>
+    <!-- Default elevation for {@link MaterialCardView}. -->
+    <dimen name="mtrl_card_elevation">1dp</dimen>
+    <!-- Default corner radius for {@link MaterialCardView}. -->
+    <dimen name="mtrl_card_corner_radius">4dp</dimen>
+    <!-- Size of the icon to be placed when the card is checked -->
+    <dimen name="mtrl_card_checked_icon_size">24dp</dimen>
+    <!-- Margin between the checked icon and the card -->
+    <dimen name="mtrl_card_checked_icon_margin">8dp</dimen>
+    <!-- TranslationZ for card when it's on dragged state. -->
+    <dimen name="mtrl_card_dragged_z">5dp</dimen>
+
+    <dimen name="m3_card_elevation">@dimen/m3_sys_elevation_level0</dimen>
+    <dimen name="m3_card_hovered_z">@dimen/m3_sys_elevation_level1</dimen>
+    <dimen name="m3_card_dragged_z">@dimen/m3_sys_elevation_level3</dimen>
+    <dimen name="m3_card_stroke_width">1dp</dimen>
+
+    <dimen name="m3_card_elevated_elevation">@dimen/m3_sys_elevation_level1</dimen>
+    <dimen name="m3_card_elevated_hovered_z">2dp</dimen> <!-- level1 -> level2 -->
+    <dimen name="m3_card_elevated_dragged_z">7dp</dimen> <!-- level1 -> level4 -->
 </resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Media -->
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                        android:id="@+id/id_client_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                />
+                <TextView
+                        android:id="@+id/hint_nom_client_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/secondary_text"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?android:attr/textColorSecondary"
+                />
+                <TextView
+                        android:id="@+id/hint_prenom_client_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/supporting_text"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?android:attr/textColorSecondary"
+                />
+
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/action_1"
+                        style="?attr/borderlessButtonStyle"
+                />
+                <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="@string/action_2"
+                        style="?attr/borderlessButtonStyle"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>

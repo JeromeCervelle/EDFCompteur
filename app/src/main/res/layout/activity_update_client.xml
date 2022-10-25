@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controleur.UpdateClient">
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="@string/identifiant"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonIdentification"
+                    tools:layout_editor_absoluteY="32dp"
+                    tools:layout_editor_absoluteX="16dp" android:autofillHints="" android:visibility="invisible"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="@string/nom"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonNom"
+                    tools:layout_editor_absoluteY="92dp"
+                    tools:layout_editor_absoluteX="18dp" android:minHeight="48dp" android:autofillHints=""/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="@string/prenom"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonPrenom"
+                    tools:layout_editor_absoluteY="159dp"
+                    tools:layout_editor_absoluteX="18dp" android:minHeight="48dp" android:autofillHints=""/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_label" tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabUpdate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/maj_word"
+            android:src="@drawable/ic_baseline_update_24" tools:ignore="ImageContrastCheck"
+            android:layout_marginEnd="336dp" android:layout_marginBottom="16dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDelete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/delete_word"
+            android:src="@drawable/ic_baseline_delete_24" tools:ignore="ImageContrastCheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintVertical_bias="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
