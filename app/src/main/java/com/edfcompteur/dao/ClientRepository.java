@@ -4,22 +4,24 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import com.edfcompteur.model.Client;
 
+import java.util.List;
+
 public class ClientRepository {
 
     private IClientDao mClientDao;
-    private LiveData<Client> mAllClients;
+    private LiveData<List<Client>> mAllClients;
 
-    ClientRepository(Application application) {
+    public ClientRepository(Application application) {
         EDFRoomDatabase db = EDFRoomDatabase.getDatabase(application);
         mClientDao = db.clientDao();
         mAllClients = mClientDao.getAlphabetizedClients();
     }
 
-    LiveData<Client> getAllClients() {
+    public LiveData<List<Client>> getAllClients() {
         return mAllClients;
     }
 
-    void insert(Client client) {
+    public void insert(Client client) {
         EDFRoomDatabase.databaseWriteExecutor.execute(() -> {
             mClientDao.insert(client);
         });

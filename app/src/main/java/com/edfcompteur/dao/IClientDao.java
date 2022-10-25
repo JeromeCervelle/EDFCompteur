@@ -7,6 +7,8 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import com.edfcompteur.model.Client;
 
+import java.util.List;
+
 @Dao
 public interface IClientDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -16,6 +18,6 @@ public interface IClientDao {
     void deleleAll();
 
     @Query("SELECT * FROM client ORDER BY client.identifiant ASC")
-    LiveData<Client> getAlphabetizedClients();
+    LiveData<List<Client>> getAlphabetizedClients();
 
 }

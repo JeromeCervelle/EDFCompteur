@@ -1,14 +1,17 @@
-package com.edfcompteur.dao;
+package com.edfcompteur.view;
 
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import com.edfcompteur.dao.ClientRepository;
 import com.edfcompteur.model.Client;
+
+import java.util.List;
 
 public class ClientViewModel extends AndroidViewModel {
 
     private ClientRepository mClient;
-    private final LiveData<Client> mAllClients;
+    private final LiveData<List<Client>> mAllClients;
 
     public ClientViewModel(Application application) {
         super(application);
@@ -16,7 +19,7 @@ public class ClientViewModel extends AndroidViewModel {
         this.mAllClients = mClient.getAllClients();
     }
 
-    public LiveData<Client> getmAllClients() {
+    public LiveData<List<Client>> getmAllClients() {
         return mAllClients;
     }
 
