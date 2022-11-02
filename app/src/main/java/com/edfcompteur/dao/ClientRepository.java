@@ -7,6 +7,7 @@ import com.edfcompteur.model.Compteur;
 
 import java.util.List;
 
+
 public class ClientRepository {
 
     private IClientDao mClientDao;

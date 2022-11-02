@@ -7,6 +7,8 @@ import com.edfcompteur.model.Compteur;
 
 import java.util.List;
 
+import java.util.List;
+
 @Dao
 public interface IClientDao<leclient> {
     @Insert(onConflict = OnConflictStrategy.IGNORE)

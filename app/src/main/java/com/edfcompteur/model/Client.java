@@ -1,13 +1,12 @@
 package com.edfcompteur.model;
 
+import android.database.DatabaseErrorHandler;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
+import java.util.Date;
 
 @Entity(tableName = "client")
 public class Client {
@@ -61,12 +60,25 @@ public class Client {
 //    @ColumnInfo(name = "situation")
 //    private int situation = 0;
 
-    @NotNull
+    @ColumnInfo(name = "ancienReleve")
+    private Double ancienReleve;
+    @ColumnInfo(name = "dateAncienReleve")
+    private String dateAncienReleve;
+
+    @ColumnInfo(name ="dernierReleve")
+    private Double dernierReleve = 0.0;
+    @ColumnInfo(name = "dateDernierReleve")
+    private String dateDernierReleve;
+    @ColumnInfo(name = "signatureBase64")
+    private String signatureBase64 = "";
+    @ColumnInfo(name = "situation")
+    private int situation = 0;
+
     public String getIdentifiant() {
         return identifiant;
     }
 
-    public void setIdentifiant(@NotNull String identifiant) {
+    public void setIdentifiant(String identifiant) {
         this.identifiant = identifiant;
     }
 
@@ -86,111 +98,111 @@ public class Client {
         this.prenom = prenom;
     }
 
-//    public String getAdresse() {
-//        return adresse;
-//    }
-//
-//    public void setAdresse(String adresse) {
-//        this.adresse = adresse;
-//    }
-//
-//    public String getCodePostal() {
-//        return codePostal;
-//    }
-//
-//    public void setCodePostal(String codePostal) {
-//        this.codePostal = codePostal;
-//    }
-//
-//    public String getVille() {
-//        return ville;
-//    }
-//
-//    public void setVille(String ville) {
-//        this.ville = ville;
-//    }
-//
-//    public String getTelephone() {
-//        return telephone;
-//    }
-//
-//    public void setTelephone(String telephone) {
-//        this.telephone = telephone;
-//    }
-//
-//    public String getIdCompteur() {
-//        return idCompteur;
-//    }
-//
-//    public void setIdCompteur(String idCompteur) {
-//        this.idCompteur = idCompteur;
-//    }
-//
-//    public Double getAncienReleve() {
-//        return ancienReleve;
-//    }
-//
-//    public void setAncienReleve(Double ancienReleve) {
-//        this.ancienReleve = ancienReleve;
-//    }
-//
-//    public String getDateAncienReleve() {
-//        return dateAncienReleve;
-//    }
-//
-//    public void setDateAncienReleve(String dateAncienReleve) {
-//        this.dateAncienReleve = dateAncienReleve;
-//    }
-//
-//    public Double getDernierReleve() {
-//        return dernierReleve;
-//    }
-//
-//    public void setDernierReleve(Double dernierReleve) {
-//        this.dernierReleve = dernierReleve;
-//    }
-//
-//    public String getDateDernierReleve() {
-//        return dateDernierReleve;
-//    }
-//
-//    public void setDateDernierReleve(String dateDernierReleve) {
-//        this.dateDernierReleve = dateDernierReleve;
-//    }
-//
-//    public String getSignatureBase64() {
-//        return signatureBase64;
-//    }
-//
-//    public void setSignatureBase64(String signatureBase64) {
-//        this.signatureBase64 = signatureBase64;
-//    }
-//
-//    public int getSituation() {
-//        return situation;
-//    }
-//
-//    public void setSituation(int situation) {
-//        this.situation = situation;
-//    }
+    public String getAdresse() {
+        return adresse;
+    }
 
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(String codePostal) {
+        this.codePostal = codePostal;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getIdCompteur() {
+        return idCompteur;
+    }
+
+    public void setIdCompteur(String idCompteur) {
+        this.idCompteur = idCompteur;
+    }
+
+    public Double getAncienReleve() {
+        return ancienReleve;
+    }
+
+    public void setAncienReleve(Double ancienReleve) {
+        this.ancienReleve = ancienReleve;
+    }
+
+    public String getDateAncienReleve() {
+        return dateAncienReleve;
+    }
+
+    public void setDateAncienReleve(String dateAncienReleve) {
+        this.dateAncienReleve = dateAncienReleve;
+    }
+
+    public Double getDernierReleve() {
+        return dernierReleve;
+    }
+
+    public void setDernierReleve(Double dernierReleve) {
+        this.dernierReleve = dernierReleve;
+    }
+
+    public String getDateDernierReleve() {
+        return dateDernierReleve;
+    }
+
+    public void setDateDernierReleve(String dateDernierReleve) {
+        this.dateDernierReleve = dateDernierReleve;
+    }
+
+    public String getSignatureBase64() {
+        return signatureBase64;
+    }
+
+    public void setSignatureBase64(String signatureBase64) {
+        this.signatureBase64 = signatureBase64;
+    }
+
+    public int getSituation() {
+        return situation;
+    }
+
+    public void setSituation(int situation) {
+        this.situation = situation;
+    }
 
     public Client() {
     }
 
-    public Client(@NotNull String identifiant, String nom, String prenom) {
-        this.identifiant = identifiant;
-        this.nom = nom;
-        this.prenom = prenom;
+    public Client(Double dernierReleve, String dateDernierReleve, String signatureBase64, int situation) {
+        this.dernierReleve = dernierReleve;
+        this.dateDernierReleve = dateDernierReleve;
+        this.signatureBase64 = signatureBase64;
+        this.situation = situation;
     }
 
-//    public void recopieClient(Client client) {
-//        this.identifiant = client.identifiant;
-//        this.nom = client.nom;
-//        this.prenom = client.prenom;
-//        this.adresse = client.adresse;
-//        this.codePostal = client.codePostal;
-//        this.ville = client.ville;
-//        this.telephone = client.telephone;
-//    }
+    public void recopieClient(Client client) {
+        this.identifiant = client.identifiant;
+        this.nom = client.nom;
+        this.prenom = client.prenom;
+        this.adresse = client.adresse;
+        this.codePostal = client.codePostal;
+        this.ville = client.ville;
+        this.telephone = client.telephone;
+    }
 }
