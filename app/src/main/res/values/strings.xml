@@ -30,6 +30,6 @@
     <string name="title">Client</string>
     <string name="secondary_text">Client second</string>
     <string name="supporting_text">Support texte</string>
-    <string name="action_1">Mettre à jour</string>
-    <string name="action_2">Supprimer</string>
+    <string name="action_1">Ajouter un compteur</string>
+    <string name="action_2">Relever un compteur</string>
 </resources>

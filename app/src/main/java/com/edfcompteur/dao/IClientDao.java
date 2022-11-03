@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.List;
 
 @Dao
-public interface IClientDao<leclient> {
+public interface IClientDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Client client);
 
@@ -35,8 +35,8 @@ public interface IClientDao<leclient> {
     @Query("SELECT * FROM client ORDER BY client.identifiant ASC")
     LiveData<List<Client>> getAlphabetizedClients();
 
-    @Query("SELECT * FROM compteur WHERE leClient = :leClient")
-    LiveData<List<Compteur>> getClientCompteurs(Client leClient);
-
-    LiveData<List<Compteur>> getClientCompteurs();
+    @Query("SELECT * FROM compteur" +
+            " JOIN client ON identifiant = identifiantClientCompteur" +
+            " WHERE identifiant = :identifiantClient")
+    LiveData<List<Compteur>> getClientWithCompteurs(String identifiantClient);
 }

@@ -2,6 +2,7 @@ package com.edfcompteur.controleur;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.edfcompteur.R;
 import com.edfcompteur.view.ClientListAdapter;
 import com.edfcompteur.dao.EDFRoomDatabase;
+import com.edfcompteur.view.ClientViewHolder;
 import com.edfcompteur.view.ClientViewModel;
 import com.edfcompteur.model.Client;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

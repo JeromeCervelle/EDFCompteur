@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Client.class, Compteur.class}, version = 1, exportSchema = false)
+@Database(entities = {Client.class, Compteur.class}, version = 2, exportSchema = false)
 public abstract class EDFRoomDatabase extends RoomDatabase {
 
     public abstract IClientDao clientDao();

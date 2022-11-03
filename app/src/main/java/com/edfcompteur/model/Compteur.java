@@ -2,9 +2,16 @@ package com.edfcompteur.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "compteur")
+@Entity(tableName = "compteur",
+foreignKeys = {
+        @ForeignKey(entity = Client.class,
+        parentColumns = "identifiant",
+        childColumns = "identifiantClientCompteur",
+        onDelete = ForeignKey.CASCADE)})
 public class Compteur {
 
     @PrimaryKey(autoGenerate = true)
@@ -13,11 +20,12 @@ public class Compteur {
 
     private String adresseCompteur;
 
-    private Client leClient;
+    private String identifiantClientCompteur;
 
-    public Compteur(int idCompteur, String adresseCompteur) {
+    public Compteur(int idCompteur, String adresseCompteur, String identifiantClientCompteur) {
         this.idCompteur = idCompteur;
         this.adresseCompteur = adresseCompteur;
+        this.identifiantClientCompteur = identifiantClientCompteur;
     }
 
     public int getIdCompteur() {
@@ -36,11 +44,11 @@ public class Compteur {
         this.adresseCompteur = adresseCompteur;
     }
 
-    public Client getLeClient() {
-        return leClient;
+    public String getIdentifiantClientCompteur() {
+        return identifiantClientCompteur;
     }
 
-    public void setLeClient(Client leClient) {
-        this.leClient = leClient;
+    public void setIdentifiantClientCompteur(String identifiantClientCompteur) {
+        this.identifiantClientCompteur = identifiantClientCompteur;
     }
 }

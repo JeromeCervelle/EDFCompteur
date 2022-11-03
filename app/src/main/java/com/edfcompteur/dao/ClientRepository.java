@@ -14,13 +14,13 @@ public class ClientRepository {
     private LiveData<List<Client>> mAllClients;
 
     private LiveData<List<Compteur>> mCompteursClient;
-    private Client leClient;
+    private String identifiantClient;
 
     public ClientRepository(Application application) {
         EDFRoomDatabase db = EDFRoomDatabase.getDatabase(application);
         mClientDao = db.clientDao();
         mAllClients = mClientDao.getAlphabetizedClients();
-        mCompteursClient = mClientDao.getClientCompteurs(leClient);
+        mCompteursClient = mClientDao.getClientWithCompteurs(identifiantClient);
     }
 
     public LiveData<List<Client>> getAllClients() {
