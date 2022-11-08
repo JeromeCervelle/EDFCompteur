@@ -37,6 +37,6 @@ public interface IClientDao {
 
     @Query("SELECT * FROM compteur" +
             " JOIN client ON identifiant = identifiantClientCompteur" +
-            " WHERE identifiant = :identifiantClient")
-    LiveData<List<Compteur>> getClientWithCompteurs(String identifiantClient);
+            " WHERE identifiantClientCompteur = 'CROFAB' ")
+    LiveData<List<Compteur>> getClientWithCompteurs();
 }

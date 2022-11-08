@@ -3,7 +3,6 @@ package com.edfcompteur.model;
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "compteur",
@@ -22,8 +21,7 @@ public class Compteur {
 
     private String identifiantClientCompteur;
 
-    public Compteur(int idCompteur, String adresseCompteur, String identifiantClientCompteur) {
-        this.idCompteur = idCompteur;
+    public Compteur(String adresseCompteur, String identifiantClientCompteur) {
         this.adresseCompteur = adresseCompteur;
         this.identifiantClientCompteur = identifiantClientCompteur;
     }

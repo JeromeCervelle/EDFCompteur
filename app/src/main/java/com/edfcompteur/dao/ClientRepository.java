@@ -14,22 +14,29 @@ public class ClientRepository {
     private LiveData<List<Client>> mAllClients;
 
     private LiveData<List<Compteur>> mCompteursClient;
-    private String identifiantClient;
+    private String midentifiantClient;
 
     public ClientRepository(Application application) {
         EDFRoomDatabase db = EDFRoomDatabase.getDatabase(application);
         mClientDao = db.clientDao();
         mAllClients = mClientDao.getAlphabetizedClients();
-        mCompteursClient = mClientDao.getClientWithCompteurs(identifiantClient);
+        mCompteursClient = mClientDao.getClientWithCompteurs();
     }
 
     public LiveData<List<Client>> getAllClients() {
         return mAllClients;
     }
-    public LiveData<List<Compteur>> getClientCompteurs() {
+    public LiveData<List<Compteur>> getClientWithCompteurs() {
         return mCompteursClient;
     }
 
+    public String getMidentifiantClient() {
+        return midentifiantClient;
+    }
+
+    public void setMidentifiantClient(String midentifiantClient) {
+        this.midentifiantClient = midentifiantClient;
+    }
 
     public void insert(Client client) {
         EDFRoomDatabase.databaseWriteExecutor.execute(() -> {

@@ -2,7 +2,6 @@ package com.edfcompteur.controleur;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ViewGroup;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -13,23 +12,15 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.edfcompteur.R;
-import com.edfcompteur.view.ClientListAdapter;
 import com.edfcompteur.dao.EDFRoomDatabase;
-import com.edfcompteur.view.ClientViewHolder;
-import com.edfcompteur.view.ClientViewModel;
 import com.edfcompteur.model.Client;
+import com.edfcompteur.view.ClientListAdapter;
+import com.edfcompteur.view.ClientViewModel;
+import com.edfcompteur.view.CompteurViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.List;
-
 public class ReleveCompteur extends AppCompatActivity {
-
-    public static final int UPDATE_CLIENT_ACTIVITY_REQUEST_CODE = 1;
-
-//    public static final String EXTRA_REPLY_IDCLIENT = "com.example.android.wordlistsql.idClient";
-//    public static final String EXTRA_REPLY_NOMCLIENT = "com.example.android.wordlistsql.nomClient";
-//    public static final String EXTRA_REPLY_PRENOMCLIENT = "com.example.android.wordlistsql.prenomClient";
-
+    
     private ClientViewModel mClientViewModel;
 
     @Override
@@ -43,11 +34,7 @@ public class ReleveCompteur extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
 
         mClientViewModel = new ViewModelProvider(this).get(ClientViewModel.class);
-        mClientViewModel.getmAllClients().observe(this, clients -> {
-            adapter.submitList(clients);
-        });
-
-
+        mClientViewModel.getmAllClients().observe(this, adapter::submitList);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
@@ -71,9 +58,7 @@ public class ReleveCompteur extends AppCompatActivity {
                                 result.getData().getStringExtra(NewClient.EXTRA_REPLY_PRENOMCLIENT)
                         );
 
-                        EDFRoomDatabase.databaseWriteExecutor.execute(() -> {
-                            mClientViewModel.insert(client);
-                        });
+                        EDFRoomDatabase.databaseWriteExecutor.execute(() -> mClientViewModel.insert(client));
                         clientInsere();
 
                     } else {
@@ -81,6 +66,8 @@ public class ReleveCompteur extends AppCompatActivity {
                     }
                 }
             });
+
+
 
     private void clientInsere() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
