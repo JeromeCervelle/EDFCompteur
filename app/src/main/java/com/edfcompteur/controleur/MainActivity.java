@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mImageViewClient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ReleveCompteur = new Intent(MainActivity.this, com.edfcompteur.controleur.ReleveCompteur.class);
+                Intent ReleveCompteur = new Intent(MainActivity.this, ReleveCompteur.class);
                 startActivity(ReleveCompteur);
             }
         });

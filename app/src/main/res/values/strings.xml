@@ -30,6 +30,13 @@
     <string name="title">Client</string>
     <string name="secondary_text">Client second</string>
     <string name="supporting_text">Support texte</string>
-    <string name="action_1">Ajouter un compteur</string>
+    <string name="action_1">Gestion compteur</string>
     <string name="action_2">Relever un compteur</string>
+    <string name="textview">Id Compteur</string>
+    <string name="IdCompteur">Id Compteur</string>
+    <string name="textviewAdresseCompteur">adresseCompteur</string>
+    <string name="adresseCompteur">Adresse Compteur</string>
+    <string name="idClientCompteur">idClientCompteur</string>
+    <string name="ajoutercompteur">AjouterCompteur</string>
+    <string name="id_compteur">ID Compteur</string>
 </resources>
