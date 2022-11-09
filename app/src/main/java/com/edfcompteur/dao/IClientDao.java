@@ -35,8 +35,6 @@ public interface IClientDao {
     @Query("SELECT * FROM client ORDER BY client.identifiant ASC")
     LiveData<List<Client>> getAlphabetizedClients();
 
-    @Query("SELECT * FROM compteur" +
-            " JOIN client ON identifiant = identifiantClientCompteur" +
-            " WHERE identifiantClientCompteur = :identifiantClientCompteur")
+    @Query("SELECT idCompteur, adresseCompteur, identifiantClientCompteur FROM compteur WHERE identifiantClientCompteur = :identifiantClientCompteur")
     LiveData<List<Compteur>> getClientWithCompteurs(String identifiantClientCompteur);
 }

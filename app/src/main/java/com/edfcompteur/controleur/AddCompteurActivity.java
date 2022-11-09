@@ -39,7 +39,7 @@ public class AddCompteurActivity extends AppCompatActivity {
         final FloatingActionButton button = findViewById(R.id.button_save);
         button.setOnClickListener(view -> {
             Intent intent = new Intent(AddCompteurActivity.this, AjouterUnCompteur.class);
-            intent.putExtra("idClientCompteur", extras.getString("ID_CLIENT"));
+            intent.putExtra("ID_CLIENT", extras.getString("ID_CLIENT"));
             NewCompteurActivityResultLauncher.launch(intent);
         });
     }

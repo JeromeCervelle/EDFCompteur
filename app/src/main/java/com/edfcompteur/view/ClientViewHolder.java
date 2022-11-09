@@ -18,8 +18,6 @@ public class ClientViewHolder extends RecyclerView.ViewHolder {
     private final TextView clientItemViewPrenom;
     
     private final MaterialButton compteurClientCard;
-    public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
-
 
     public ClientViewHolder(View itemView) {
         super(itemView);

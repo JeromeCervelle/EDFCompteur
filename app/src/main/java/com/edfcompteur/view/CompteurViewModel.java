@@ -11,16 +11,15 @@ import java.util.List;
 public class CompteurViewModel extends AndroidViewModel {
 
     private ClientRepository mClient;
-    private final LiveData<List<Compteur>> mAllCompteurs;
+    private LiveData<List<Compteur>> mAllCompteurs;
 
     public CompteurViewModel(Application application) {
         super(application);
         this.mClient = new ClientRepository(application);
-        String identifiantClient = "CROFAB";
-        this.mAllCompteurs = mClient.getClientWithCompteurs(identifiantClient);
     }
 
     public LiveData<List<Compteur>> getmAllCompteurs(String identifiantClient) {
+        this.mAllCompteurs = mClient.getClientWithCompteurs(identifiantClient);
         return mAllCompteurs;
     }
 

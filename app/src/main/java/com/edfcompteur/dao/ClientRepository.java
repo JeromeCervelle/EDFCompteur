@@ -12,30 +12,21 @@ public class ClientRepository {
 
     private IClientDao mClientDao;
     private LiveData<List<Client>> mAllClients;
-
     private LiveData<List<Compteur>> mCompteursClient;
-    private String midentifiantClient = "CROFAB";
+
 
     public ClientRepository(Application application) {
         EDFRoomDatabase db = EDFRoomDatabase.getDatabase(application);
         mClientDao = db.clientDao();
-        mAllClients = mClientDao.getAlphabetizedClients();
-        mCompteursClient = mClientDao.getClientWithCompteurs(midentifiantClient);
     }
 
     public LiveData<List<Client>> getAllClients() {
+        mAllClients = mClientDao.getAlphabetizedClients();
         return mAllClients;
     }
     public LiveData<List<Compteur>> getClientWithCompteurs(String identifiantClient) {
+        mCompteursClient = mClientDao.getClientWithCompteurs(identifiantClient);
         return mCompteursClient;
-    }
-
-    public String getMidentifiantClient() {
-        return midentifiantClient;
-    }
-
-    public void setMidentifiantClient(String midentifiantClient) {
-        this.midentifiantClient = midentifiantClient;
     }
 
     public void insert(Client client) {

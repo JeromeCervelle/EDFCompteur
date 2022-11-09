@@ -24,13 +24,10 @@ public class AjouterUnCompteur extends AppCompatActivity {
         setContentView(R.layout.activity_ajouter_un_compteur);
 
             Bundle extras = getIntent().getExtras();
-        System.out.println(extras.getString("idClientCompteur"));
 
             mEditIdCompteur = findViewById(R.id.id_compteur);
             mEditAdresseCompteur = findViewById(R.id.adresseCompteur);
             mEditIdClientCompteur = findViewById(R.id.idClientCompteur);
-
-            mEditIdClientCompteur.setText(extras.getString("ID_CLIENT"));
 
             final Button button = findViewById(R.id.button_save_compteur);
             button.setOnClickListener(view -> {
@@ -40,7 +37,7 @@ public class AjouterUnCompteur extends AppCompatActivity {
                 } else {
                     String adresseCompteur = mEditAdresseCompteur.getText().toString();
                     replyIntent.putExtra(EXTRA_REPLY_ADRESSE_COMPTEUR, adresseCompteur);
-                    replyIntent.putExtra(EXTRA_REPLY_ID_CLIENT_COMPTEUR, extras.getString("idClientCompteur"));
+                    replyIntent.putExtra(EXTRA_REPLY_ID_CLIENT_COMPTEUR, extras.getString("ID_CLIENT"));
                     setResult(RESULT_OK, replyIntent);
                 }
                 finish();

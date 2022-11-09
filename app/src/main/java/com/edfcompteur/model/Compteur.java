@@ -1,19 +1,19 @@
 package com.edfcompteur.model;
 
 import androidx.annotation.NonNull;
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.PrimaryKey;
+import androidx.room.*;
 
 @Entity(tableName = "compteur",
-foreignKeys = {
-        @ForeignKey(entity = Client.class,
-        parentColumns = "identifiant",
-        childColumns = "identifiantClientCompteur",
-        onDelete = ForeignKey.CASCADE)})
+        foreignKeys = {
+            @ForeignKey(entity = Client.class,
+                parentColumns = "identifiant",
+                childColumns = "identifiantClientCompteur",
+                onDelete = ForeignKey.CASCADE)},
+        indices =  {
+            @Index( name = "idx_idCompteur",
+                    value = {"identifiantClientCompteur", "idCompteur"},
+                    unique = true)})
 public class Compteur {
-
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int idCompteur;

@@ -16,7 +16,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class ClientListAdapter extends ListAdapter<Client, ClientViewHolder> {
 
-
     public ClientListAdapter(@NonNull DiffUtil.ItemCallback<Client> diffCallback) {
         super(diffCallback);
     }
