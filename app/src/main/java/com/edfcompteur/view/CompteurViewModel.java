@@ -16,11 +16,11 @@ public class CompteurViewModel extends AndroidViewModel {
     public CompteurViewModel(Application application) {
         super(application);
         this.mClient = new ClientRepository(application);
-        String identifiantClient = mClient.getMidentifiantClient();
-        this.mAllCompteurs = mClient.getClientWithCompteurs();
+        String identifiantClient = "CROFAB";
+        this.mAllCompteurs = mClient.getClientWithCompteurs(identifiantClient);
     }
 
-    public LiveData<List<Compteur>> getmAllCompteurs() {
+    public LiveData<List<Compteur>> getmAllCompteurs(String identifiantClient) {
         return mAllCompteurs;
     }
 

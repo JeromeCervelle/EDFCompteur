@@ -34,7 +34,7 @@ public class AddCompteurActivity extends AppCompatActivity {
         recyclerViewCompteur.setLayoutManager(new LinearLayoutManager(recyclerViewCompteur.getContext()));
 
         mCompteurViewModel = new ViewModelProvider(this).get(CompteurViewModel.class);
-        mCompteurViewModel.getmAllCompteurs().observe(this, adapterCompteur::submitList);
+        mCompteurViewModel.getmAllCompteurs(extras.getString("ID_CLIENT")).observe(this, adapterCompteur::submitList);
 
         final FloatingActionButton button = findViewById(R.id.button_save);
         button.setOnClickListener(view -> {

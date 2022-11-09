@@ -1,6 +1,7 @@
 package com.edfcompteur.model;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -16,9 +17,9 @@ public class Compteur {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int idCompteur;
-
+    @ColumnInfo(name = "adresseCompteur")
     private String adresseCompteur;
-
+    @ColumnInfo(name = "identifiantClientCompteur")
     private String identifiantClientCompteur;
 
     public Compteur(String adresseCompteur, String identifiantClientCompteur) {

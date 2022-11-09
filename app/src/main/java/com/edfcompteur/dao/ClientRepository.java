@@ -14,19 +14,19 @@ public class ClientRepository {
     private LiveData<List<Client>> mAllClients;
 
     private LiveData<List<Compteur>> mCompteursClient;
-    private String midentifiantClient;
+    private String midentifiantClient = "CROFAB";
 
     public ClientRepository(Application application) {
         EDFRoomDatabase db = EDFRoomDatabase.getDatabase(application);
         mClientDao = db.clientDao();
         mAllClients = mClientDao.getAlphabetizedClients();
-        mCompteursClient = mClientDao.getClientWithCompteurs();
+        mCompteursClient = mClientDao.getClientWithCompteurs(midentifiantClient);
     }
 
     public LiveData<List<Client>> getAllClients() {
         return mAllClients;
     }
-    public LiveData<List<Compteur>> getClientWithCompteurs() {
+    public LiveData<List<Compteur>> getClientWithCompteurs(String identifiantClient) {
         return mCompteursClient;
     }
 
