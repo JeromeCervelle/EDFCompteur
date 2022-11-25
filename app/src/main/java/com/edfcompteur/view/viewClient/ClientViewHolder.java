@@ -1,11 +1,10 @@
-package com.edfcompteur.view;
+package com.edfcompteur.view.viewClient;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 import com.edfcompteur.R;
 import com.edfcompteur.controleur.AddCompteurActivity;
@@ -16,7 +15,7 @@ public class ClientViewHolder extends RecyclerView.ViewHolder {
     private final TextView clientItemViewId;
     private final TextView clientItemViewNom;
     private final TextView clientItemViewPrenom;
-    
+
     private final MaterialButton compteurClientCard;
 
     public ClientViewHolder(View itemView) {

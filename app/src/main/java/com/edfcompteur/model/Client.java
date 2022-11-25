@@ -1,13 +1,10 @@
 package com.edfcompteur.model;
 
-import android.database.DatabaseErrorHandler;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-
-import java.util.Date;
 
 @Entity(tableName = "client",
     indices = @Index(name ="idx_idClient", value = {"identifiant"},

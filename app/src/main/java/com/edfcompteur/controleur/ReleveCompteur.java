@@ -14,13 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.edfcompteur.R;
 import com.edfcompteur.dao.EDFRoomDatabase;
 import com.edfcompteur.model.Client;
-import com.edfcompteur.view.ClientListAdapter;
-import com.edfcompteur.view.ClientViewModel;
-import com.edfcompteur.view.CompteurViewModel;
+import com.edfcompteur.view.viewClient.ClientListAdapter;
+import com.edfcompteur.view.viewClient.ClientViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ReleveCompteur extends AppCompatActivity {
-    
+
     private ClientViewModel mClientViewModel;
 
     @Override

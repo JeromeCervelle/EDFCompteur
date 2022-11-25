@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.edfcompteur.R;
-import com.edfcompteur.view.ClientViewModel;
+import com.edfcompteur.view.viewClient.ClientViewModel;
 
 public class MainActivity extends AppCompatActivity {
 

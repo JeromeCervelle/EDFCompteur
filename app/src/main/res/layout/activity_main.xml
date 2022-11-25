@@ -34,17 +34,19 @@
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
-                                <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="150dp" app:srcCompat="@drawable/identification"
-                                        android:contentDescription="@string/Identification"
-                                        android:id="@+id/imageViewIdentification" android:layout_weight="1"/>
+                            <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp" app:srcCompat="@drawable/identification"
+                                    android:contentDescription="@string/Identification"
+                                    android:id="@+id/imageViewIdentification" android:layout_weight="1"
+                                    tools:ignore="ImageContrastCheck,ImageContrastCheck"/>
 
-                                <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="150dp" app:srcCompat="@drawable/client"
-                                        android:contentDescription="@string/Client"
-                                        android:id="@+id/imageViewClient" android:layout_weight="1"/>
+                            <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp" app:srcCompat="@drawable/client"
+                                    android:contentDescription="@string/Client"
+                                    android:id="@+id/imageViewClient" android:layout_weight="1"
+                                    tools:ignore="ImageContrastCheck"/>
                         </LinearLayout>
                         <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent">
                                 <TextView

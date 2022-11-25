@@ -1,7 +1,9 @@
-package com.edfcompteur.dao;
+package com.edfcompteur.dao.daoCLient;
 
 import android.app.Application;
 import androidx.lifecycle.LiveData;
+import com.edfcompteur.dao.EDFRoomDatabase;
+import com.edfcompteur.dao.IClientDao;
 import com.edfcompteur.model.Client;
 import com.edfcompteur.model.Compteur;
 

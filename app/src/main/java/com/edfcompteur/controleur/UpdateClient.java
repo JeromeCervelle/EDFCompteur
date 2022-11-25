@@ -2,13 +2,12 @@ package com.edfcompteur.controleur;
 
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import com.edfcompteur.R;
 import com.edfcompteur.dao.EDFRoomDatabase;
 import com.edfcompteur.model.Client;
-import com.edfcompteur.view.ClientViewModel;
+import com.edfcompteur.view.viewClient.ClientViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class UpdateClient extends AppCompatActivity {

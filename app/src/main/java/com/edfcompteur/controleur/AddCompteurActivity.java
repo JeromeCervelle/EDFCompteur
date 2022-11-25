@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.edfcompteur.R;
 import com.edfcompteur.dao.EDFRoomDatabase;
 import com.edfcompteur.model.Compteur;
-import com.edfcompteur.view.CompteurListAdapter;
-import com.edfcompteur.view.CompteurViewModel;
+import com.edfcompteur.view.viewCompteur.CompteurListAdapter;
+import com.edfcompteur.view.viewCompteur.CompteurViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class AddCompteurActivity extends AppCompatActivity {

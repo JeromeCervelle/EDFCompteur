@@ -7,11 +7,6 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.edfcompteur.R;
-import com.edfcompteur.dao.ClientRepository;
-import com.edfcompteur.model.Client;
-import com.edfcompteur.view.ClientViewModel;
-
-import java.util.List;
 
 public class NewClient extends AppCompatActivity {
 

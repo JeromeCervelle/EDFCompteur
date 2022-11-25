@@ -1,9 +1,9 @@
-package com.edfcompteur.view;
+package com.edfcompteur.view.viewCompteur;
 
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import com.edfcompteur.dao.ClientRepository;
+import com.edfcompteur.dao.daoCLient.ClientRepository;
 import com.edfcompteur.model.Compteur;
 
 import java.util.List;

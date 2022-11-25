@@ -1,17 +1,13 @@
-package com.edfcompteur.view;
+package com.edfcompteur.view.viewClient;
 
 import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.AsyncDifferConfig;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
-import com.edfcompteur.controleur.ReleveCompteur;
 import com.edfcompteur.controleur.UpdateClient;
 import com.edfcompteur.model.Client;
-import com.edfcompteur.view.ClientViewHolder;
 import org.jetbrains.annotations.NotNull;
 
 public class ClientListAdapter extends ListAdapter<Client, ClientViewHolder> {

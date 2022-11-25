@@ -1,4 +1,4 @@
-package com.edfcompteur.view;
+package com.edfcompteur.view.viewCompteur;
 
 import android.content.Intent;
 import android.view.View;
@@ -7,15 +7,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import com.edfcompteur.controleur.AddCompteurActivity;
-import com.edfcompteur.controleur.UpdateClient;
-import com.edfcompteur.model.Client;
 import com.edfcompteur.model.Compteur;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
 public class CompteurListAdapter extends ListAdapter<Compteur, CompteurViewHolder> {
-
 
     public CompteurListAdapter(@NonNull DiffUtil.ItemCallback<Compteur> diffCallback) {
         super(diffCallback);
